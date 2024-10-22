@@ -13,13 +13,13 @@ namespace sensor_project.UI.Views
 
         private void Window_Activated(object sender, EventArgs e)
         {
-            // Altera a cor da borda quando a janela é ativada
+            // Altera a cor da borda quando a janela é focada
             InnerBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(113, 96, 232)); // Cor personalizada (roxo)
         }
 
         private void Window_Deactivated(object sender, EventArgs e)
         {
-            // Altera a cor da borda quando a janela é desativada
+            // Altera a cor da borda quando a janela sai do foco
             InnerBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(128, 128, 128)); // Cor personalizada (cinza)
         }
 
