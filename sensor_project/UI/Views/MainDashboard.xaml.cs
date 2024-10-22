@@ -1,40 +1,13 @@
-﻿using sensor_project.Sensors.Temperature;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
-namespace sensor_project
+namespace sensor_project.UI.Views
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainDashboard : Window
     {
-        private TemperatureSensor temperatureSensor;
-
-        public MainWindow()
+        public MainDashboard()
         {
             InitializeComponent();
-
-            temperatureSensor = new TemperatureSensor();
-
-            // Atualiza o label com a temperatura simulada
-            UpdateTemperatureLabel();
-        }
-        private void UpdateTemperatureLabel()
-        {
-            // Obtém a temperatura do sensor simulado
-            double temperature = temperatureSensor.GetTemperature();
-
-            // Atualiza o texto do Label com a temperatura obtida
-            temperatureLabel.Content = $"Temperatura: {temperature}°C";
+            DataContext = new sensor_project.Core.DashboardViewModel();
         }
     }
 }

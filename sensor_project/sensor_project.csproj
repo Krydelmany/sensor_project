@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Core\" />
-    <Folder Include="MotionDetection\" />
-    <Folder Include="Utils\" />
-    <Folder Include="Sensors\Humidity\" />
     <Folder Include="UI\Controls\" />
   </ItemGroup>
 
