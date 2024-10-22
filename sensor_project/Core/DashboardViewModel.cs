@@ -92,15 +92,16 @@ namespace sensor_project.Core
 
         private void StartSimulation(object? parameter)
         {
+            IsSimulationActive = true; // Adicione isso para habilitar a lógica
             simulationTimer.Start();
-            IsSimulationActive = true; // Atualiza o estado da simulação
         }
 
         private void StopSimulation(object? parameter)
         {
+            IsSimulationActive = false; // Adicione isso para habilitar a lógica
             simulationTimer.Stop();
-            IsSimulationActive = false; // Atualiza o estado da simulação
         }
+
 
         private void SimulateSensors(object? sender, EventArgs e)
         {

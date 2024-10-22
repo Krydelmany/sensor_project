@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="sensor_project.UI.Controls.Button"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:sensor_project.UI.Controls">
+    <Button Content="{Binding Text, RelativeSource={RelativeSource AncestorType=UserControl}}"
+            Background="{Binding BackgroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}"
+            Foreground="{Binding ForegroundColor, RelativeSource={RelativeSource AncestorType=UserControl}}"
+            Command="{Binding Command, RelativeSource={RelativeSource AncestorType=UserControl}}"
+            CommandParameter="{Binding CommandParameter, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+</UserControl>

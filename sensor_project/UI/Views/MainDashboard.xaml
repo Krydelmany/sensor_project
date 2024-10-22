@@ -1,48 +1,31 @@
 ﻿<Window x:Class="sensor_project.UI.Views.MainDashboard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:sensor_project.Utils"
-        Title="Dashboard"
-        Width="400" Height="280">
-
-    <Window.Resources>
-        <local:BoolToYesNoConverter x:Key="BoolToYesNoConverter"/>
-    </Window.Resources>
+        xmlns:controls="clr-namespace:sensor_project.UI.Controls"
+        mc:Ignorable="d" Height="685" Width="995" Background="Transparent"
+        WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen" FontFamily="SegoeUI"
+        Activated="Window_Activated" Deactivated="Window_Deactivated">
 
     <Grid>
-        <TextBlock Text="Monitoramento de Temperatura e Umidade" FontSize="18" FontWeight="Bold" Margin="10"/>
+        <Border x:Name="InnerBorder" CornerRadius="10" BorderThickness="1" BorderBrush="Transparent" Margin="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="260"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--Left Side-->
+                <Border CornerRadius="9 0 0 9" Background="#FF313131">
 
-        <!-- Indicadores de temperatura e umidade -->
-        <TextBlock Text="Temperatura:" Margin="10,40,10,0" />
-        <TextBlock Text="{Binding Temperature}" FontSize="16" Foreground="Red" Margin="100,40,10,0" />
+                </Border>
 
-        <TextBlock Text="Umidade:" Margin="10,80,10,0" />
-        <TextBlock Text="{Binding Humidity}" FontSize="16" Foreground="Blue" Margin="100,80,10,0" />
+                <!--Right Side-->
+                <Border CornerRadius="0 9 9 0" Grid.Column="1" Background="#FF191919">
 
-        <!-- Indicador de movimento -->
-        <TextBlock Text="Movimento Detectado:" Margin="10,120,10,0" />
-        <TextBlock Text="{Binding IsMovementDetected , Converter={StaticResource BoolToYesNoConverter}}" 
-                   FontSize="16" Margin="136,117,10,3" />
-
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Button Content="Iniciar Simulação" 
-        Command="{Binding StartSimulationCommand}" 
-        IsEnabled="{Binding IsStartSimulationButtonEnabled}" 
-        Margin="4,185,6,15" 
-        Grid.Column="0"/>
-
-            <Button Content="Parar Simulação" 
-        Command="{Binding StopSimulationCommand}" 
-        IsEnabled="{Binding IsStopSimulationButtonEnabled}" 
-        Margin="6,185,4,15" 
-        Grid.Column="1"/>
-        </Grid>
-
-
-
+                </Border>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
