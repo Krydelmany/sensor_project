@@ -6,6 +6,11 @@ using sensor_project.MotionDetection;
 using sensor_project.Sensors.Humidity;
 using sensor_project.Sensors.Temperature;
 
+/* 
+ * ViewModel para a tela de dashboard
+ * Responsável por gerenciar a lógica de negócio da tela
+ */
+
 namespace sensor_project.Core
 {
     public class DashboardViewModel : INotifyPropertyChanged

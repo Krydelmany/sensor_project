@@ -1,5 +1,10 @@
 ﻿using System.Windows.Input;
 
+/*
+ * Define um comando que pode ser executado por um controle de interface do usuário (UI) para realizar uma ação específica.
+ * O comando pode ser associado a um evento de controle de interface do usuário, como um botão, para executar a ação quando o evento ocorrer.
+ */
+
 public class RelayCommand : ICommand
 {
     private readonly Action<object?> _execute;

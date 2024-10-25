@@ -2,6 +2,11 @@
 using System.Windows.Controls;
 using System.Windows.Input;
 
+/*
+ * Define um controle personalizado chamado Button que herda de UserControl no namespace sensor_project.UI.Controls. 
+ * Ele inclui várias propriedades dependentes (Dependency Properties) que permitem a personalização do controle através de XAML
+ */
+
 namespace sensor_project.UI.Controls
 {
     public partial class Button : UserControl
@@ -47,13 +52,13 @@ namespace sensor_project.UI.Controls
         public static readonly DependencyProperty CommandProperty =
             DependencyProperty.Register("Command", typeof(ICommand), typeof(Button), new PropertyMetadata(null));
 
-        public bool IsEnabled
+        public new bool IsEnabled
         {
             get { return (bool)GetValue(IsEnabledProperty); }
             set { SetValue(IsEnabledProperty, value); }
         }
 
-        public static readonly DependencyProperty IsEnabledProperty =
+        public static new readonly DependencyProperty IsEnabledProperty =
             DependencyProperty.Register("IsEnabled", typeof(bool), typeof(Button), new PropertyMetadata(true));
 
     }
