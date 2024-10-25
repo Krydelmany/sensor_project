@@ -12,14 +12,14 @@
         <!-- Window Control Buttons Style -->
         <Style x:Key="WindowControlButton" TargetType="Button">
             <Setter Property="Width" Value="46"/>
-            <Setter Property="Height" Value="32"/>
+            <Setter Property="Height" Value="38"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="0,5,0,0">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -151,11 +151,22 @@
                             </StackPanel>
 
                             <!-- Control Buttons -->
+                            <!-- Control Buttons -->
                             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                                <controls:Button Text="Iniciar Simulação" BackgroundColor="#4CAF50" ForegroundColor="White" Command="{Binding StartSimulationCommand}" IsEnabled="{Binding IsSimulationInactive}" Margin="0,0,20,0"/>
+                                <controls:Button Text="Iniciar Simulação" 
+                     BackgroundColor="#4CAF50" 
+                     ForegroundColor="White" 
+                     Command="{Binding StartSimulationCommand}" 
+                     IsEnabled="{Binding IsStartSimulationButtonEnabled}"
+                     Margin="0,0,20,0"/>
 
-                                <controls:Button Text="Parar Simulação" BackgroundColor="#F44336" ForegroundColor="White" Command="{Binding StopSimulationCommand}" IsEnabled="{Binding IsSimulationActive}"/>
+                                <controls:Button Text="Parar Simulação" 
+                     BackgroundColor="#F44336" 
+                     ForegroundColor="White" 
+                     Command="{Binding StopSimulationCommand}" 
+                     IsEnabled="{Binding IsStopSimulationButtonEnabled}"/>
                             </StackPanel>
+
                         </Grid>
                     </Border>
                 </Grid>

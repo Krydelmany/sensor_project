@@ -41,6 +41,7 @@ namespace sensor_project.Core
         public bool IsStartSimulationButtonEnabled => !IsSimulationActive;
         public bool IsStopSimulationButtonEnabled => IsSimulationActive;
 
+
         private double temperature;
         public double Temperature
         {
@@ -92,16 +93,15 @@ namespace sensor_project.Core
 
         private void StartSimulation(object? parameter)
         {
-            IsSimulationActive = true; // Adicione isso para habilitar a lógica
+            IsSimulationActive = true; 
             simulationTimer.Start();
         }
 
         private void StopSimulation(object? parameter)
         {
-            IsSimulationActive = false; // Adicione isso para habilitar a lógica
+            IsSimulationActive = false; 
             simulationTimer.Stop();
         }
-
 
         private void SimulateSensors(object? sender, EventArgs e)
         {

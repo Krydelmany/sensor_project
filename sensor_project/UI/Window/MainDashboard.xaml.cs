@@ -15,7 +15,7 @@ namespace sensor_project.UI.Views
         private void Window_Activated(object sender, EventArgs e)
         {
             // Altera a cor da borda quando a janela é focada
-            InnerBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(232, 232, 232)); // Cor personalizada (roxo)
+            InnerBorder.BorderBrush = new SolidColorBrush(Color.FromRgb(52, 52, 52)); // Cor personalizada (roxo)
         }
 
         private void Window_Deactivated(object sender, EventArgs e)
@@ -37,6 +37,7 @@ namespace sensor_project.UI.Views
                 DragMove();
             }
         }
+
 
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)
         {

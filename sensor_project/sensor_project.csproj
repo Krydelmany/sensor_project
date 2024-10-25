@@ -8,4 +8,11 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="UI\Controls\Resources\" />
+    <Folder Include="UI\Controls\Window\" />
+    <Folder Include="UI\Resources\" />
+    <Folder Include="UI\Views\" />
+  </ItemGroup>
+
 </Project>
