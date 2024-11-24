@@ -9,8 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="UI\Controls\Resources\" />
-    <Folder Include="UI\Controls\Window\" />
+    <Compile Remove="UI\Controls\Resources\**" />
+    <Compile Remove="UI\Controls\Window\**" />
+    <EmbeddedResource Remove="UI\Controls\Resources\**" />
+    <EmbeddedResource Remove="UI\Controls\Window\**" />
+    <None Remove="UI\Controls\Resources\**" />
+    <None Remove="UI\Controls\Window\**" />
+    <Page Remove="UI\Controls\Resources\**" />
+    <Page Remove="UI\Controls\Window\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="UI\Resources\" />
     <Folder Include="UI\Views\" />
   </ItemGroup>
